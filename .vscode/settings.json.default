@@ -1,0 +1,8 @@
+{
+    "latex-workshop.intellisense.package.extra": ["amssymb", "amsmath", "enumitem", "xcolor", "tcolorbox", "tikz", "multicol", "booktabs", "makecell", "parskip", "xstring", "subfiles", "changepage", "fancyhdr", "hyperref", "babel", "notestyles"],
+    "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/out/%RELATIVE_DIR%",
+    "latex-workshop.synctex.synctexjs.enabled": false,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "ltex.language": "en-GB",
+    "ltex.checkFrequency": "save"
+}
