@@ -46,6 +46,14 @@
       "name": "definition",
       "snippet": "{${1:title}}"
     },
+    "descriptenum": {
+      "name": "descriptenum",
+      "snippet": "\n\t\\item[$1] $0"
+    },
+    "descriptimize": {
+      "name": "descriptimize",
+      "snippet": "\n\t\\item[$1] $0"
+    },
     "example": {},
     "exercise{}": {
       "name": "exercise",
@@ -56,9 +64,9 @@
       "name": "sidenote",
       "snippet": "{${1:title}}"
     },
-    "descriptimize": {
-      "name": "descriptimize",
-      "snippet": "\n\t\\item[$1] $0"
+    "theorem{}": {
+      "name": "theorem",
+      "snippet": "{${1:title}}"
     }
   },
   "options": []

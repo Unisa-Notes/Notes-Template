@@ -36,6 +36,16 @@
 \RequirePackage[xcharter]{newtxmath}
 \RequirePackage{bm}
 
+% Bold Math
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\oldtextbf{\boldmath #1}}
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+\makeatletter
+\g@addto@macro\normalfont{\unboldmath}
+\makeatother
+
 % Colors
 \RequirePackage[dvipsnames,table]{xcolor}
 \colorlet{example color}{blue!15!white}
@@ -46,6 +56,8 @@
 \colorlet{exercise border}{orange!75!black}
 \colorlet{note color}{red!15!white}
 \colorlet{note border}{red!75!black}
+\colorlet{theorem color}{MidnightBlue!20!white}
+\colorlet{theorem border}{MidnightBlue!75!black}
 
 % Tables
 \RequirePackage{tabularray}
@@ -70,6 +82,9 @@
 	{\endtcolorbox}
 \newenvironment{sidenote}[2][]
 	{\tcolorbox[breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
+	{\endtcolorbox}
+\newenvironment{theorem}[2][]
+	{\tcolorbox[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center #1]}
 	{\endtcolorbox}
 
 % Include/Input Subfiles
@@ -107,6 +122,18 @@
 \newlist{descriptimize}{description}{2}
 \setlist[descriptimize]{font=\textbullet\enspace}
 
+\newcounter{descriptcount}
+\newlist{descriptenum}{description}{2}
+\setlist[descriptenum, 1]{%
+	before={\setcounter{descriptcount}{0}%
+					\renewcommand*\thedescriptcount{\arabic{descriptcount}}},
+	font=\stepcounter{descriptcount}\thedescriptcount\enspace
+}
+\setlist[descriptenum, 2]{%
+	before={\setcounter{descriptcount}{0}%
+					\renewcommand*\thedescriptcount{(\alph{descriptcount})}},
+	font=\stepcounter{descriptcount}\thedescriptcount\enspace
+}
 
 % TOC Page Number Spacing
 \makeatletter
