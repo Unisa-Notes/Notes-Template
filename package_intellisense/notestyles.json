@@ -1,34 +1,34 @@
 {
-  "includes": [
-    "amssymb",
-    "amsmath",
-    "enumitem",
-    "hyphsubst",
-    "babel",
-    "hyperref",
-    "geometry",
-    "fancyhdr",
-    "multicol",
-    "fontenc",
-    "charter",
-    "inconsolata",
-    "cabin",
-    "newtxmath",
-    "bm",
-    "xcolor",
-    "tabularray",
-    "booktabs",
-    "varwidth",
-    "parskip",
-    "tcolorbox",
-    "adjustbox",
-    "xstring",
-    "subfiles",
-    "changepage",
-    "tikz",
-    "graphicx"
-  ],
-  "cmds": {
+  "includes": {
+    "amssymb": [],
+    "amsmath": [],
+    "enumitem": [],
+    "hyphsubst": [],
+    "babel": [],
+    "hyperref": [],
+    "geometry": [],
+    "fancyhdr": [],
+    "multicol": [],
+    "fontenc": [],
+    "charter": [],
+    "inconsolata": [],
+    "cabin": [],
+    "newtxmath": [],
+    "bm": [],
+    "xcolor": [],
+    "tabularray": [],
+    "booktabs": [],
+    "varwidth": [],
+    "parskip": [],
+    "tcolorbox": [],
+    "adjustbox": [],
+    "xstring": [],
+    "subfiles": [],
+    "changepage": [],
+    "tikz": [],
+    "graphicx": []
+  },
+  "macros": {
     "addfile[]{}": {
       "snippet": "addfile[${2:input}]{${1:<filename>}}"
     },
@@ -46,14 +46,8 @@
       "name": "definition",
       "snippet": "{${1:title}}"
     },
-    "descriptenum": {
-      "name": "descriptenum",
-      "snippet": "\n\t\\item[$1] $0"
-    },
-    "descriptimize": {
-      "name": "descriptimize",
-      "snippet": "\n\t\\item[$1] $0"
-    },
+    "descriptenum": {},
+    "descriptimize": {},
     "example": {},
     "exercise{}": {
       "name": "exercise",
@@ -69,5 +63,6 @@
       "snippet": "{${1:title}}"
     }
   },
-  "options": []
+  "options": [],
+  "keyvals": []
 }
