@@ -33,6 +33,7 @@
 \begin{descriptenum}
 \begin{descriptimize}
 \begin{example}
+\begin{example}[title]
 \begin{exercise}{title}
 \begin{indentparagraph}
 \begin{sidenote}{title}

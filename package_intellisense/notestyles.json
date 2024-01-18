@@ -22,6 +22,7 @@
     "parskip": [],
     "tcolorbox": [],
     "adjustbox": [],
+    "xparse": [],
     "xstring": [],
     "subfiles": [],
     "changepage": [],
@@ -49,6 +50,10 @@
     "descriptenum": {},
     "descriptimize": {},
     "example": {},
+    "example[]": {
+      "name": "example",
+      "snippet": "[${1:title}]"
+    },
     "exercise{}": {
       "name": "exercise",
       "snippet": "{${1:title}}"
