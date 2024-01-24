@@ -4,9 +4,11 @@
 % Maths
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\renewcommand{\qedsymbol}{$\blacksquare$}
 
 % Lists
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 
 % Language Settings
 \RequirePackage[english=nohyphenation]{hyphsubst}
@@ -15,6 +17,7 @@
 
 % Bookmarks
 \usepackage[bookmarksnumbered]{hyperref}
+\usepackage{nameref}
 
 % Headers, Footers and Margins
 \RequirePackage[margin=2cm, vmargin=3cm]{geometry}
@@ -73,14 +76,14 @@
 \tcbuselibrary{breakable}
 \RequirePackage{adjustbox}
 \RequirePackage{xparse}
+\RequirePackage{etoolbox}
 
 \NewDocumentEnvironment{example}
-	{o +b}
+	{O{} O{}}
 	{
-		\IfNoValueTF{#1}
-			{\tcolorbox[coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}, parbox=false, center]}
-			{\tcolorbox[breakable, colback=example color, colframe=example border, fonttitle=\bfseries, title={Example: #1}, center title, parbox=false, center]}
-		#2
+		\ifblank{#1}
+			{\tcolorbox[coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}, parbox=false, center, #2]}
+			{\tcolorbox[breakable, colback=example color, colframe=example border, fonttitle=\bfseries, title={Example: #1}, nameref={Example: #1}, center title, parbox=false, center, #2]}
 	}
 	{\endtcolorbox}
 \newenvironment{definition}[2][]
@@ -148,3 +151,11 @@
 \makeatletter
 \renewcommand{\@pnumwidth}{1.75em} 
 \makeatother
+
+% Pictures
+\RequirePackage{wrapfig}
+\RequirePackage[hypcap=false]{caption}
+
+% Questions and Answers
+\newenvironment{question}{\bfseries}{}
+\newenvironment{answer}{\par\normalfont}{}
