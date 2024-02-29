@@ -2,7 +2,7 @@
 \providecommand{\mintedoutdir}{\main/out}
 \documentclass[11pt, a4paper]{book}
 
-\usepackage{notestyles}
+\usepackage{\main/notestyles}
 \usepackage[outputdir=\mintedoutdir]{minted}
 \usemintedstyle{colorful}
 \raggedbottom
@@ -11,12 +11,12 @@
 \author{ }
 
 \begin{document}
-	\frontmatter
-	\begin{titlepage}
-		\maketitle
-	\end{titlepage}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\tableofcontents
-	\noindent\rule{\textwidth}{0.4pt}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
+  \frontmatter
+  \begin{titlepage}
+    \maketitle
+  \end{titlepage}
+  \clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
+  \tableofcontents
+  \noindent\rule{\textwidth}{0.4pt}
+  \clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
 \end{document}

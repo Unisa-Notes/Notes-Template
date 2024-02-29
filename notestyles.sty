@@ -79,36 +79,36 @@
 \RequirePackage{etoolbox}
 
 \NewDocumentEnvironment{example}
-	{O{} O{}}
-	{
-		\ifblank{#1}
-			{\tcolorbox[coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}, parbox=false, center, #2]}
-			{\tcolorbox[breakable, colback=example color, colframe=example border, fonttitle=\bfseries, title={Example: #1}, nameref={Example: #1}, center title, parbox=false, center, #2]}
-	}
-	{\endtcolorbox}
+  {O{} O{}}
+  {
+    \ifblank{#1}
+      {\tcolorbox[coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}, parbox=false, center, #2]}
+      {\tcolorbox[breakable, colback=example color, colframe=example border, fonttitle=\bfseries, title={Example: #1}, nameref={Example: #1}, center title, parbox=false, center, #2]}
+  }
+  {\endtcolorbox}
 \newenvironment{definition}[2][]
-	{\tcolorbox[breakable, colback=definition color, colframe=definition border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
-	{\endtcolorbox}
+  {\tcolorbox[breakable, colback=definition color, colframe=definition border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
+  {\endtcolorbox}
 \newenvironment{exercise}[2][]
-	{\tcolorbox[breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
-	{\endtcolorbox}
+  {\tcolorbox[breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
+  {\endtcolorbox}
 \newenvironment{sidenote}[2][]
-	{\tcolorbox[breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
-	{\endtcolorbox}
+  {\tcolorbox[breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
+  {\endtcolorbox}
 \newenvironment{theorem}[2][]
-	{\tcolorbox[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center #1]}
-	{\endtcolorbox}
+  {\tcolorbox[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center #1]}
+  {\endtcolorbox}
 
 % Include/Input Subfiles
 \RequirePackage{xstring}
 \RequirePackage{subfiles}
 \newcommand{\addfile}[2][include]
-	{\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup%
-	 \IfEqCase{#1}{%
-			{include}{\subfileinclude{#2}}%
-			{input}{\subfile{#2}}
-	 }[\PackageError{addfile}{Undefined option to addfile: #1}{}]%
-	}
+  {\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup%
+   \IfEqCase{#1}{%
+      {include}{\subfileinclude{#2}}%
+      {input}{\subfile{#2}}
+   }[\PackageError{addfile}{Undefined option to addfile: #1}{}]%
+  }
 
 % Indented Paragraphs
 \RequirePackage{changepage}
@@ -116,9 +116,9 @@
 
 % Horizontal Rules at document ends
 \newcommand{\rulebookend}{\vbox{\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt}%
-	\cfoot{}}
+  \cfoot{}}
 \newcommand{\rulechapterend}{\noindent\rule{\textwidth}{0.4pt}%
-	\cfoot{}
+  \cfoot{}
 }
 
 % Images
@@ -137,14 +137,14 @@
 \newcounter{descriptcount}
 \newlist{descriptenum}{description}{2}
 \setlist[descriptenum, 1]{%
-	before={\setcounter{descriptcount}{0}%
-					\renewcommand*\thedescriptcount{\arabic{descriptcount}}},
-	font=\stepcounter{descriptcount}\thedescriptcount\enspace
+  before={\setcounter{descriptcount}{0}%
+          \renewcommand*\thedescriptcount{\arabic{descriptcount}}},
+  font=\stepcounter{descriptcount}\thedescriptcount\enspace
 }
 \setlist[descriptenum, 2]{%
-	before={\setcounter{descriptcount}{0}%
-					\renewcommand*\thedescriptcount{(\alph{descriptcount})}},
-	font=\stepcounter{descriptcount}\thedescriptcount\enspace
+  before={\setcounter{descriptcount}{0}%
+          \renewcommand*\thedescriptcount{(\alph{descriptcount})}},
+  font=\stepcounter{descriptcount}\thedescriptcount\enspace
 }
 
 % TOC Page Number Spacing
